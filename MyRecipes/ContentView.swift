@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    let service = CocktailService()
+    @State private var text = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(text)
+            Button {
+                service.fetch { result in
+                    switch result {
+                    case .success(let success):
+                        text = success[0].name
+                    case .failure(let failure):
+                        print(failure.localizedDescription)
+                    }
+                }
+            } label: {
+                Text("Get")
+            }
         }
         .padding()
     }
