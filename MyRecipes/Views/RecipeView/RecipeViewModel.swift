@@ -34,7 +34,7 @@ class RecipeViewModel: ObservableObject {
         service.fetch { result in
             switch result {
             case .success(let success):
-                print("hi")
+                print(success[0].video)
                 self.recipes.append(success[0])
             case .failure(let failure):
                 print(failure.localizedDescription)
@@ -49,4 +49,6 @@ class RecipeViewModel: ObservableObject {
     func removeAllRecipe() {
         recipes.removeAll()
     }
+    
+    
 }

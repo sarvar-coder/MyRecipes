@@ -11,6 +11,30 @@
 		5E327E6E2DE4B4A800BAE2AA /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E327E6D2DE4B4A800BAE2AA /* ServiceType.swift */; };
 		5E3334032DE084D80028D215 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3334022DE084D80028D215 /* RecipeView.swift */; };
 		5E3334052DE084E90028D215 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3334042DE084E90028D215 /* FavouriteView.swift */; };
+		5E6889AA2DE97548006B5767 /* RobotoCondensed-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68897D2DE97548006B5767 /* RobotoCondensed-Thin.ttf */; };
+		5E6889AB2DE97548006B5767 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68897E2DE97548006B5767 /* RobotoCondensed-Bold.ttf */; };
+		5E6889AC2DE97548006B5767 /* RobotoCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68897F2DE97548006B5767 /* RobotoCondensed-SemiBoldItalic.ttf */; };
+		5E6889AD2DE97548006B5767 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889802DE97548006B5767 /* RobotoCondensed-Light.ttf */; };
+		5E6889AE2DE97548006B5767 /* RobotoCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889812DE97548006B5767 /* RobotoCondensed-ExtraBoldItalic.ttf */; };
+		5E6889AF2DE97548006B5767 /* RobotoCondensed-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889822DE97548006B5767 /* RobotoCondensed-ThinItalic.ttf */; };
+		5E6889B02DE97548006B5767 /* RobotoCondensed-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889832DE97548006B5767 /* RobotoCondensed-ExtraLight.ttf */; };
+		5E6889B12DE97548006B5767 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889842DE97548006B5767 /* RobotoCondensed-Italic.ttf */; };
+		5E6889B22DE97548006B5767 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889852DE97548006B5767 /* RobotoCondensed-BoldItalic.ttf */; };
+		5E6889B32DE97548006B5767 /* RobotoCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889862DE97548006B5767 /* RobotoCondensed-SemiBold.ttf */; };
+		5E6889B42DE97548006B5767 /* RobotoCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889872DE97548006B5767 /* RobotoCondensed-Medium.ttf */; };
+		5E6889B52DE97548006B5767 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889882DE97548006B5767 /* RobotoCondensed-LightItalic.ttf */; };
+		5E6889B62DE97548006B5767 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E6889892DE97548006B5767 /* RobotoCondensed-Regular.ttf */; };
+		5E6889B72DE97548006B5767 /* RobotoCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68898A2DE97548006B5767 /* RobotoCondensed-MediumItalic.ttf */; };
+		5E6889B82DE97548006B5767 /* RobotoCondensed-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68898B2DE97548006B5767 /* RobotoCondensed-ExtraLightItalic.ttf */; };
+		5E6889B92DE97548006B5767 /* RobotoCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68898C2DE97548006B5767 /* RobotoCondensed-ExtraBold.ttf */; };
+		5E6889BA2DE97548006B5767 /* RobotoCondensed-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68898D2DE97548006B5767 /* RobotoCondensed-Black.ttf */; };
+		5E6889BB2DE97548006B5767 /* RobotoCondensed-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E68898E2DE97548006B5767 /* RobotoCondensed-BlackItalic.ttf */; };
+		5E6889C12DE97690006B5767 /* RobotoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889C02DE97690006B5767 /* RobotoFont.swift */; };
+		5E6889C42DE97C0E006B5767 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889C32DE97C0E006B5767 /* RecipeDetailView.swift */; };
+		5E6889C72DE98597006B5767 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889C62DE98597006B5767 /* String+Ext.swift */; };
+		5E6889C92DE98D99006B5767 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889C82DE98D99006B5767 /* Video.swift */; };
+		5E6889CB2DE98DDF006B5767 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889CA2DE98DDF006B5767 /* TextView.swift */; };
+		5E6889CD2DE99194006B5767 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889CC2DE99194006B5767 /* Ingredients.swift */; };
 		5ED2B1092DD0C67C004331ED /* MyRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2B1082DD0C67C004331ED /* MyRecipesApp.swift */; };
 		5ED2B10B2DD0C67C004331ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2B10A2DD0C67C004331ED /* ContentView.swift */; };
 		5ED2B10D2DD0C67D004331ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2B10C2DD0C67D004331ED /* Assets.xcassets */; };
@@ -31,6 +55,31 @@
 		5E327E6D2DE4B4A800BAE2AA /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		5E3334022DE084D80028D215 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		5E3334042DE084E90028D215 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
+		5E68897D2DE97548006B5767 /* RobotoCondensed-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Thin.ttf"; sourceTree = "<group>"; };
+		5E68897E2DE97548006B5767 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		5E68897F2DE97548006B5767 /* RobotoCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		5E6889802DE97548006B5767 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		5E6889812DE97548006B5767 /* RobotoCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		5E6889822DE97548006B5767 /* RobotoCondensed-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-ThinItalic.ttf"; sourceTree = "<group>"; };
+		5E6889832DE97548006B5767 /* RobotoCondensed-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5E6889842DE97548006B5767 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		5E6889852DE97548006B5767 /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5E6889862DE97548006B5767 /* RobotoCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		5E6889872DE97548006B5767 /* RobotoCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		5E6889882DE97548006B5767 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		5E6889892DE97548006B5767 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		5E68898A2DE97548006B5767 /* RobotoCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5E68898B2DE97548006B5767 /* RobotoCondensed-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		5E68898C2DE97548006B5767 /* RobotoCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5E68898D2DE97548006B5767 /* RobotoCondensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Black.ttf"; sourceTree = "<group>"; };
+		5E68898E2DE97548006B5767 /* RobotoCondensed-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5E6889BF2DE97622006B5767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5E6889C02DE97690006B5767 /* RobotoFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotoFont.swift; sourceTree = "<group>"; };
+		5E6889C32DE97C0E006B5767 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		5E6889C62DE98597006B5767 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		5E6889C82DE98D99006B5767 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		5E6889CA2DE98DDF006B5767 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		5E6889CC2DE99194006B5767 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		5ED2B1052DD0C67C004331ED /* MyRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED2B1082DD0C67C004331ED /* MyRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesApp.swift; sourceTree = "<group>"; };
 		5ED2B10A2DD0C67C004331ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +132,66 @@
 			path = ServiceType;
 			sourceTree = "<group>";
 		};
+		5E68895F2DE97548006B5767 /* Roboto_Condensed,Rubik,Scheherazade_New */ = {
+			isa = PBXGroup;
+			children = (
+				5E68897A2DE97548006B5767 /* Roboto_Condensed */,
+			);
+			path = "Roboto_Condensed,Rubik,Scheherazade_New";
+			sourceTree = "<group>";
+		};
+		5E68897A2DE97548006B5767 /* Roboto_Condensed */ = {
+			isa = PBXGroup;
+			children = (
+				5E68897C2DE97548006B5767 /* static */,
+				5E6889C02DE97690006B5767 /* RobotoFont.swift */,
+			);
+			path = Roboto_Condensed;
+			sourceTree = "<group>";
+		};
+		5E68897C2DE97548006B5767 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				5E68897D2DE97548006B5767 /* RobotoCondensed-Thin.ttf */,
+				5E68897E2DE97548006B5767 /* RobotoCondensed-Bold.ttf */,
+				5E68897F2DE97548006B5767 /* RobotoCondensed-SemiBoldItalic.ttf */,
+				5E6889802DE97548006B5767 /* RobotoCondensed-Light.ttf */,
+				5E6889812DE97548006B5767 /* RobotoCondensed-ExtraBoldItalic.ttf */,
+				5E6889822DE97548006B5767 /* RobotoCondensed-ThinItalic.ttf */,
+				5E6889832DE97548006B5767 /* RobotoCondensed-ExtraLight.ttf */,
+				5E6889842DE97548006B5767 /* RobotoCondensed-Italic.ttf */,
+				5E6889852DE97548006B5767 /* RobotoCondensed-BoldItalic.ttf */,
+				5E6889862DE97548006B5767 /* RobotoCondensed-SemiBold.ttf */,
+				5E6889872DE97548006B5767 /* RobotoCondensed-Medium.ttf */,
+				5E6889882DE97548006B5767 /* RobotoCondensed-LightItalic.ttf */,
+				5E6889892DE97548006B5767 /* RobotoCondensed-Regular.ttf */,
+				5E68898A2DE97548006B5767 /* RobotoCondensed-MediumItalic.ttf */,
+				5E68898B2DE97548006B5767 /* RobotoCondensed-ExtraLightItalic.ttf */,
+				5E68898C2DE97548006B5767 /* RobotoCondensed-ExtraBold.ttf */,
+				5E68898D2DE97548006B5767 /* RobotoCondensed-Black.ttf */,
+				5E68898E2DE97548006B5767 /* RobotoCondensed-BlackItalic.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		5E6889C22DE97BF4006B5767 /* RecipeDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				5E6889C32DE97C0E006B5767 /* RecipeDetailView.swift */,
+				5E6889C82DE98D99006B5767 /* Video.swift */,
+				5E6889CA2DE98DDF006B5767 /* TextView.swift */,
+			);
+			path = RecipeDetailView;
+			sourceTree = "<group>";
+		};
+		5E6889C52DE98589006B5767 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E6889C62DE98597006B5767 /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5ED2B0FC2DD0C67C004331ED = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +211,15 @@
 		5ED2B1072DD0C67C004331ED /* MyRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				5E6889C52DE98589006B5767 /* Extensions */,
+				5E6889BF2DE97622006B5767 /* Info.plist */,
 				5ED2B1082DD0C67C004331ED /* MyRecipesApp.swift */,
 				5ED2B10A2DD0C67C004331ED /* ContentView.swift */,
 				5ED2B1312DD0DE20004331ED /* Views */,
 				5ED2B1232DD0CCAC004331ED /* Models */,
 				5ED2B1202DD0CC73004331ED /* Strategy */,
 				5ED2B1192DD0CBFD004331ED /* Services */,
+				5E68895F2DE97548006B5767 /* Roboto_Condensed,Rubik,Scheherazade_New */,
 				5ED2B10C2DD0C67D004331ED /* Assets.xcassets */,
 				5ED2B10E2DD0C67D004331ED /* Preview Content */,
 			);
@@ -164,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				5ED2B1242DD0CCB5004331ED /* Recipe.swift */,
+				5E6889CC2DE99194006B5767 /* Ingredients.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +286,7 @@
 			children = (
 				5ED2B1322DD0DE33004331ED /* MainTabBar.swift */,
 				5E327E682DE4AD4200BAE2AA /* RecipeView */,
+				5E6889C22DE97BF4006B5767 /* RecipeDetailView */,
 				5E327E692DE4AD4C00BAE2AA /* FavouriteView */,
 			);
 			path = Views;
@@ -236,8 +350,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6889B52DE97548006B5767 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				5E6889B32DE97548006B5767 /* RobotoCondensed-SemiBold.ttf in Resources */,
+				5E6889B22DE97548006B5767 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				5E6889AD2DE97548006B5767 /* RobotoCondensed-Light.ttf in Resources */,
+				5E6889AE2DE97548006B5767 /* RobotoCondensed-ExtraBoldItalic.ttf in Resources */,
+				5E6889BB2DE97548006B5767 /* RobotoCondensed-BlackItalic.ttf in Resources */,
 				5ED2B1102DD0C67D004331ED /* Preview Assets.xcassets in Resources */,
+				5E6889B02DE97548006B5767 /* RobotoCondensed-ExtraLight.ttf in Resources */,
+				5E6889AA2DE97548006B5767 /* RobotoCondensed-Thin.ttf in Resources */,
 				5ED2B10D2DD0C67D004331ED /* Assets.xcassets in Resources */,
+				5E6889B72DE97548006B5767 /* RobotoCondensed-MediumItalic.ttf in Resources */,
+				5E6889B62DE97548006B5767 /* RobotoCondensed-Regular.ttf in Resources */,
+				5E6889B42DE97548006B5767 /* RobotoCondensed-Medium.ttf in Resources */,
+				5E6889AB2DE97548006B5767 /* RobotoCondensed-Bold.ttf in Resources */,
+				5E6889B92DE97548006B5767 /* RobotoCondensed-ExtraBold.ttf in Resources */,
+				5E6889B12DE97548006B5767 /* RobotoCondensed-Italic.ttf in Resources */,
+				5E6889AF2DE97548006B5767 /* RobotoCondensed-ThinItalic.ttf in Resources */,
+				5E6889BA2DE97548006B5767 /* RobotoCondensed-Black.ttf in Resources */,
+				5E6889B82DE97548006B5767 /* RobotoCondensed-ExtraLightItalic.ttf in Resources */,
+				5E6889AC2DE97548006B5767 /* RobotoCondensed-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,21 +380,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6889C72DE98597006B5767 /* String+Ext.swift in Sources */,
 				5ED2B10B2DD0C67C004331ED /* ContentView.swift in Sources */,
 				5ED2B1302DD0D92A004331ED /* CocktailURL.swift in Sources */,
 				5ED2B1272DD0D14A004331ED /* MealService.swift in Sources */,
 				5ED2B12E2DD0D907004331ED /* CocktailService.swift in Sources */,
 				5ED2B1332DD0DE33004331ED /* MainTabBar.swift in Sources */,
 				5E327E6E2DE4B4A800BAE2AA /* ServiceType.swift in Sources */,
+				5E6889CD2DE99194006B5767 /* Ingredients.swift in Sources */,
 				5ED2B11D2DD0CC24004331ED /* Meal.swift in Sources */,
+				5E6889C12DE97690006B5767 /* RobotoFont.swift in Sources */,
+				5E6889CB2DE98DDF006B5767 /* TextView.swift in Sources */,
 				5E3334052DE084E90028D215 /* FavouriteView.swift in Sources */,
 				5E3334032DE084D80028D215 /* RecipeView.swift in Sources */,
 				5ED2B1092DD0C67C004331ED /* MyRecipesApp.swift in Sources */,
 				5ED2B1252DD0CCB5004331ED /* Recipe.swift in Sources */,
 				5E327E6B2DE4AD6100BAE2AA /* RecipeViewModel.swift in Sources */,
 				5ED2B12C2DD0D256004331ED /* MealURL.swift in Sources */,
+				5E6889C92DE98D99006B5767 /* Video.swift in Sources */,
 				5ED2B11F2DD0CC36004331ED /* Cocktail.swift in Sources */,
 				5ED2B1222DD0CC97004331ED /* ServiceProtocol.swift in Sources */,
+				5E6889C42DE97C0E006B5767 /* RecipeDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +537,7 @@
 				DEVELOPMENT_TEAM = 386NUBNWC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +567,7 @@
 				DEVELOPMENT_TEAM = 386NUBNWC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyRecipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

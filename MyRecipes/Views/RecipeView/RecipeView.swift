@@ -17,7 +17,7 @@ struct RecipeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack() {
                         ForEach(vm.recipes) { recipe in
-                          CardView(recipe)
+                                CardView(recipe)
                         }
                     }
                     .scrollTargetLayout()
@@ -25,6 +25,7 @@ struct RecipeView: View {
                 .scrollClipDisabled()
                 .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
                 .contentMargins(16, for: .scrollContent)
+                .frame(height: 500)
                 
                 Button {
                     vm.refresh()
@@ -41,6 +42,7 @@ struct RecipeView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.cyan)
             }
+            .navigationTitle("Meal Recipe")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                    
@@ -59,18 +61,20 @@ struct RecipeView: View {
         
         VStack(alignment: .center, spacing: 8) {
             NavigationLink {
-                
+               RecipeDetailView(recipe: recipe)
             } label: {
                 HStack {
+                    TapImageView()
+                    Spacer()
                     Text(recipe.name)
-                        .font(.title)
+                        .font(.custom(.roboto(.mediumItalic), size: 23, relativeTo: .largeTitle))
                         .foregroundStyle(.white)
                         .frame(width: 200, height: 30)
                     Spacer()
-                    Image(systemName: "arrow.up.forward")
-                        .imageScale(.large)
-                        .tint(.white)
-                }
+                    TapImageView()
+                } 
+                .padding(5)
+                .border(.white, width: 1)
             }
           Rectangle()
                 .fill(.white)
@@ -81,16 +85,18 @@ struct RecipeView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(.rect(cornerRadius: 10))
+                } else if phase.image == nil {
+                    
+                } else {
+                    
                 }
             }
             HStack() {
-                
                 Text("Category:")
                 Spacer()
                 Text(recipe.category)
-                
             }
-            .font(.system(size: 23))
+            .font(.custom(.roboto(.mediumItalic), size: 23))
             .foregroundStyle(.white)
         }
         .padding(15)
@@ -103,6 +109,13 @@ struct RecipeView: View {
                              y: phase.isIdentity ? 1 : 0.3,
                              anchor: .center)
         }
+    }
+    
+    func TapImageView() -> some View {
+        Image(systemName: "hand.tap.fill")
+            .resizable()
+            .frame(width: 32, height: 32)
+            .tint(.white)
     }
 }
 
@@ -121,3 +134,5 @@ struct RecipeView: View {
 //        .rotationEffect(.init(degrees: phase == .identity ? 0 : phase.value * 5), anchor: .bottomTrailing)
 //        .offset(x: minX < 0 ? minX / 2 : -minX)
 //}
+
+

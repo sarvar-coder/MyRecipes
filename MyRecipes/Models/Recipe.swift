@@ -19,4 +19,18 @@ struct Recipe: Identifiable, Equatable {
     let ingredients: [String]
     let measurements: [String]
     let source: String
+    
+    func extractID() -> String {
+        guard let equalSign = video.firstIndex(of: "=") else { return "" }
+        
+        let equalSignIndex = video.index(after: equalSign)
+        let endIndex = video.endIndex
+        let id = video[equalSignIndex..<endIndex]
+        
+        return String(id)
+    }
+    
+    func ingredMeasure() -> [Ingredients] {
+        zip(ingredients, measurements).map { Ingredients(ingredient: $0.0, measure: $0.1) }
+    }
 }
