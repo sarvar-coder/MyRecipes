@@ -9,14 +9,22 @@ import Foundation
 
 
 class RecipeViewModel: ObservableObject {
-    
-    let service: ServiceProtocol
-    
+        
+    @Published var service: ServiceProtocol = MealService() {
+        didSet {
+            refresh()
+        }
+    }
     @Published var recipes = [Recipe]()
+    @Published var serviceImage: ServiceType = .meal
     
-    init(service: ServiceProtocol) {
-        self.service = service
+    init() {
+        service = MealService()
         fetchInLoop()
+    }
+    
+    deinit {
+        removeAllRecipe()
     }
     
     func refresh() {
@@ -42,13 +50,10 @@ class RecipeViewModel: ObservableObject {
         }
     }
     
-    func recipeTitle(_ type: ServiceType) -> String {
-        type.rawValue
-    }
-    
     func removeAllRecipe() {
         recipes.removeAll()
     }
-    
-    
+
 }
+
+

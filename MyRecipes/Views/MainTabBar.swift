@@ -11,12 +11,12 @@ import SwiftUI
 struct MainTabBar: View {
     var body: some View {
         TabView {
-            Text("Main View")
+            RecipeView()
                 .tabItem {
                     Label("Recipe", systemImage: "book")
                 }.tag(0)
             
-            Text("Favourite View")
+            FavouriteView()
                 .tabItem {
                     Label("Favourites", systemImage: "heart")
                 }

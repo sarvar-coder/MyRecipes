@@ -18,9 +18,8 @@ struct RecipeDetailView: View {
             ScrollView {
                 CategoryAndCountryView()
                 InstructionView()
-                IngreDinetsView() 
+                IngreDinetsView()
             }
-            
         }
         .navigationTitle(recipe.name)
         .toolbarTitleDisplayMode(.inline)
@@ -43,18 +42,16 @@ struct RecipeDetailView: View {
     func CategoryAndCountryView() -> some View {
         VStack(alignment: .center, spacing: 16) {
             HStack {
-                Text("Catgory:")
+                Text("Category:")
                 Spacer()
                 Text(recipe.category)
-              
             }
-            Rectangle()
-                .frame(height: 2)
+                Rectangle()
+                    .frame(height: 2)
             HStack {
                 Text("Country:")
                 Spacer()
                 Text(recipe.country)
-
             }
         }
         .font(.custom(.roboto(.mediumItalic), size: 20))
@@ -78,10 +75,11 @@ struct RecipeDetailView: View {
         VStack(alignment: .leading) {
             ForEach(recipe.ingredMeasure()) { item in
                 HStack(alignment: .center) {
-                    
                     Text(item.ingredient)
                     Spacer()
+                    
                     Rectangle().frame(height: 1)
+                    
                     Spacer()
                     Text(item.measure)
                 }

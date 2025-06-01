@@ -31,6 +31,9 @@ struct Recipe: Identifiable, Equatable {
     }
     
     func ingredMeasure() -> [Ingredients] {
-        zip(ingredients, measurements).map { Ingredients(ingredient: $0.0, measure: $0.1) }
+        let ingredients = zip(ingredients, measurements).map { Ingredients(ingredient: $0.0, measure: $0.1) }
+        return ingredients.filter { ingredient in
+            ingredient.ingredient != "" && ingredient.measure != ""
+        }
     }
 }
