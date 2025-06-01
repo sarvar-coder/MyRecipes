@@ -9,13 +9,15 @@ import SwiftUI
 //https://www.thecocktaildb.com/images/media/drink/of1rj41504348346.jpg
 struct RecipeView: View {
     
-    @StateObject private var vm = RecipeViewModel(service: MealService())
+    @StateObject private var vm = RecipeViewModel()
+    
+    @State private var showServiceChangeView = false
     var body: some View {
         NavigationStack {
             
             VStack {
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack() {
+                    HStack {
                         ForEach(vm.recipes) { recipe in
                                 CardView(recipe)
                         }
@@ -25,7 +27,7 @@ struct RecipeView: View {
                 .scrollClipDisabled()
                 .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
                 .contentMargins(16, for: .scrollContent)
-                .frame(height: 500)
+    
                 
                 Button {
                     vm.refresh()
@@ -42,16 +44,22 @@ struct RecipeView: View {
                 .buttonStyle(.borderedProminent)
                 .tint(.cyan)
             }
-            .navigationTitle("Meal Recipe")
+            .navigationTitle("\(vm.serviceImage.title) Recipe")
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                   
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        showServiceChangeView.toggle()
+                    } label: {
+                        Image(systemName: vm.serviceImage.imageName)
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                    }
                     
                 }
             }
-            .background {
-                Image("backGround").resizable()
-                    .frame(width: 400, height: 1000)
+            
+            .sheet(isPresented: $showServiceChangeView) {
+                ServiceChangeView(service: $vm.service, serviceType: $vm.serviceImage)
             }
         }
     }
@@ -64,14 +72,16 @@ struct RecipeView: View {
                RecipeDetailView(recipe: recipe)
             } label: {
                 HStack {
-                    TapImageView()
-                    Spacer()
+
                     Text(recipe.name)
                         .font(.custom(.roboto(.mediumItalic), size: 23, relativeTo: .largeTitle))
                         .foregroundStyle(.white)
                         .frame(width: 200, height: 30)
-                    Spacer()
-                    TapImageView()
+                    Image(systemName:"arrow.up.forward")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .foregroundStyle(.white)
+
                 } 
                 .padding(5)
                 .border(.white, width: 1)
@@ -105,8 +115,7 @@ struct RecipeView: View {
         .containerRelativeFrame(.horizontal, count: 1, spacing: 0.0)
         .scrollTransition { content, phase in
             content
-                .scaleEffect(x: phase.isIdentity ? 1 : 0.9,
-                             y: phase.isIdentity ? 1 : 0.3,
+                .scaleEffect(y: phase.isIdentity ? 1 : 0.2,
                              anchor: .center)
         }
     }
