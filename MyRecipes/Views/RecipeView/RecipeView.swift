@@ -109,7 +109,7 @@ struct RecipeView: View {
             .font(.custom(.roboto(.mediumItalic), size: 23))
             .foregroundStyle(.white)
         }
-        .padding(15)
+        .padding(15) 
         .background(.cyan.gradient)
         .clipShape(.rect(cornerRadius: 20))
         .containerRelativeFrame(.horizontal, count: 1, spacing: 0.0)

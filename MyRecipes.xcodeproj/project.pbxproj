@@ -35,7 +35,14 @@
 		5E6889C92DE98D99006B5767 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889C82DE98D99006B5767 /* Video.swift */; };
 		5E6889CB2DE98DDF006B5767 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889CA2DE98DDF006B5767 /* TextView.swift */; };
 		5E6889CD2DE99194006B5767 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6889CC2DE99194006B5767 /* Ingredients.swift */; };
+		5E86B7E72DF1DEAF00ED9D03 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86B7E62DF1DEA800ED9D03 /* View.swift */; };
+		5E86B7E92DF1E1A000ED9D03 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86B7E82DF1E1A000ED9D03 /* CustomCorner.swift */; };
+		5E86B7EB2DF1E32500ED9D03 /* OffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86B7EA2DF1E32500ED9D03 /* OffsetModifier.swift */; };
 		5E95D2D92DEC31CE00E23D51 /* ServiceChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95D2D82DEC31CE00E23D51 /* ServiceChangeView.swift */; };
+		5EC092752DF2063E002976E4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC092742DF2063E002976E4 /* CoreDataManager.swift */; };
+		5EC092782DF2CB57002976E4 /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EC092762DF2CB57002976E4 /* Favourites.xcdatamodeld */; };
+		5EC0927B2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataClass 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC092792DF2CBC4002976E4 /* FavouriteRecipe+CoreDataClass 2.swift */; };
+		5EC0927C2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataProperties 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC0927A2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataProperties 2.swift */; };
 		5ED2B1092DD0C67C004331ED /* MyRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2B1082DD0C67C004331ED /* MyRecipesApp.swift */; };
 		5ED2B10B2DD0C67C004331ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2B10A2DD0C67C004331ED /* ContentView.swift */; };
 		5ED2B10D2DD0C67D004331ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2B10C2DD0C67D004331ED /* Assets.xcassets */; };
@@ -81,7 +88,14 @@
 		5E6889C82DE98D99006B5767 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		5E6889CA2DE98DDF006B5767 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		5E6889CC2DE99194006B5767 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
+		5E86B7E62DF1DEA800ED9D03 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		5E86B7E82DF1E1A000ED9D03 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		5E86B7EA2DF1E32500ED9D03 /* OffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetModifier.swift; sourceTree = "<group>"; };
 		5E95D2D82DEC31CE00E23D51 /* ServiceChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceChangeView.swift; sourceTree = "<group>"; };
+		5EC092742DF2063E002976E4 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5EC092772DF2CB57002976E4 /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
+		5EC092792DF2CBC4002976E4 /* FavouriteRecipe+CoreDataClass 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouriteRecipe+CoreDataClass 2.swift"; sourceTree = "<group>"; };
+		5EC0927A2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataProperties 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouriteRecipe+CoreDataProperties 2.swift"; sourceTree = "<group>"; };
 		5ED2B1052DD0C67C004331ED /* MyRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED2B1082DD0C67C004331ED /* MyRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesApp.swift; sourceTree = "<group>"; };
 		5ED2B10A2DD0C67C004331ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,9 +203,21 @@
 		5E6889C52DE98589006B5767 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5E86B7E62DF1DEA800ED9D03 /* View.swift */,
 				5E6889C62DE98597006B5767 /* String+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5E86B7EC2DF1F08400ED9D03 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5EC092742DF2063E002976E4 /* CoreDataManager.swift */,
+				5EC092792DF2CBC4002976E4 /* FavouriteRecipe+CoreDataClass 2.swift */,
+				5EC0927A2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataProperties 2.swift */,
+				5EC092762DF2CB57002976E4 /* Favourites.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		5E95D2D72DEC31B600E23D51 /* ServiceChangeView */ = {
@@ -227,11 +253,14 @@
 				5ED2B10A2DD0C67C004331ED /* ContentView.swift */,
 				5ED2B1312DD0DE20004331ED /* Views */,
 				5ED2B1232DD0CCAC004331ED /* Models */,
+				5E86B7EC2DF1F08400ED9D03 /* CoreData */,
 				5ED2B1202DD0CC73004331ED /* Strategy */,
 				5ED2B1192DD0CBFD004331ED /* Services */,
 				5E68895F2DE97548006B5767 /* Roboto_Condensed,Rubik,Scheherazade_New */,
 				5ED2B10C2DD0C67D004331ED /* Assets.xcassets */,
 				5ED2B10E2DD0C67D004331ED /* Preview Content */,
+				5E86B7E82DF1E1A000ED9D03 /* CustomCorner.swift */,
+				5E86B7EA2DF1E32500ED9D03 /* OffsetModifier.swift */,
 			);
 			path = MyRecipes;
 			sourceTree = "<group>";
@@ -294,10 +323,10 @@
 		5ED2B1312DD0DE20004331ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E95D2D72DEC31B600E23D51 /* ServiceChangeView */,
 				5ED2B1322DD0DE33004331ED /* MainTabBar.swift */,
 				5E327E682DE4AD4200BAE2AA /* RecipeView */,
 				5E6889C22DE97BF4006B5767 /* RecipeDetailView */,
+				5E95D2D72DEC31B600E23D51 /* ServiceChangeView */,
 				5E327E692DE4AD4C00BAE2AA /* FavouriteView */,
 			);
 			path = Views;
@@ -398,14 +427,21 @@
 				5ED2B12E2DD0D907004331ED /* CocktailService.swift in Sources */,
 				5ED2B1332DD0DE33004331ED /* MainTabBar.swift in Sources */,
 				5E327E6E2DE4B4A800BAE2AA /* ServiceType.swift in Sources */,
+				5EC092782DF2CB57002976E4 /* Favourites.xcdatamodeld in Sources */,
 				5E6889CD2DE99194006B5767 /* Ingredients.swift in Sources */,
 				5ED2B11D2DD0CC24004331ED /* Meal.swift in Sources */,
+				5E86B7E92DF1E1A000ED9D03 /* CustomCorner.swift in Sources */,
+				5EC0927B2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataClass 2.swift in Sources */,
+				5EC0927C2DF2CBC4002976E4 /* FavouriteRecipe+CoreDataProperties 2.swift in Sources */,
+				5E86B7E72DF1DEAF00ED9D03 /* View.swift in Sources */,
+				5EC092752DF2063E002976E4 /* CoreDataManager.swift in Sources */,
 				5E6889C12DE97690006B5767 /* RobotoFont.swift in Sources */,
 				5E95D2D92DEC31CE00E23D51 /* ServiceChangeView.swift in Sources */,
 				5E6889CB2DE98DDF006B5767 /* TextView.swift in Sources */,
 				5E3334052DE084E90028D215 /* FavouriteView.swift in Sources */,
 				5E3334032DE084D80028D215 /* RecipeView.swift in Sources */,
 				5ED2B1092DD0C67C004331ED /* MyRecipesApp.swift in Sources */,
+				5E86B7EB2DF1E32500ED9D03 /* OffsetModifier.swift in Sources */,
 				5ED2B1252DD0CCB5004331ED /* Recipe.swift in Sources */,
 				5E327E6B2DE4AD6100BAE2AA /* RecipeViewModel.swift in Sources */,
 				5ED2B12C2DD0D256004331ED /* MealURL.swift in Sources */,
@@ -620,6 +656,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5EC092762DF2CB57002976E4 /* Favourites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5EC092772DF2CB57002976E4 /* Favourites.xcdatamodel */,
+			);
+			currentVersion = 5EC092772DF2CB57002976E4 /* Favourites.xcdatamodel */;
+			path = Favourites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5ED2B0FD2DD0C67C004331ED /* Project object */;
 }

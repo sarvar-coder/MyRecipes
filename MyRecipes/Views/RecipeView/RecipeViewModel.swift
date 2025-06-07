@@ -42,7 +42,7 @@ class RecipeViewModel: ObservableObject {
         service.fetch { result in
             switch result {
             case .success(let success):
-                print(success[0].video)
+//                print(success[0].video)
                 self.recipes.append(success[0])
             case .failure(let failure):
                 print(failure.localizedDescription)

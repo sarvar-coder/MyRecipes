@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MyRecipesApp: App {
+    let manager = CoreDataManager()
     var body: some Scene {
         WindowGroup {
-            MainTabBar()
+            RecipeView()
+                .environment(\.managedObjectContext, manager.viewcontext)
+                
         }
     }
 }

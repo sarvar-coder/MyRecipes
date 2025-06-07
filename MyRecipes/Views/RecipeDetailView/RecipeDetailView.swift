@@ -10,11 +10,17 @@ import SwiftUI
 import WebKit
 
 struct RecipeDetailView: View {
+    
     let recipe: Recipe
+    @State private var offset: CGFloat = 0
+    @Environment(\.managedObjectContext) var viewContext
+    
     var body: some View {
+        
         VStack(alignment: .center, spacing: 16) {
             
             YoutubeVidoeView()
+            
             ScrollView {
                 CategoryAndCountryView()
                 InstructionView()
@@ -25,18 +31,19 @@ struct RecipeDetailView: View {
         .toolbarTitleDisplayMode(.inline)
     }
     
-    func HeaderView() -> some View {
-        Text(recipe.name)
-            .font(.custom(.roboto(.medium), size: 30))
-            .frame(maxWidth: .infinity, alignment: .center)
-    }
-    
+    @ViewBuilder
     func YoutubeVidoeView() -> some View {
-        Video(videoID: recipe.extractID())
-            .frame(maxWidth: .infinity)
-            .frame(height: 250)
-            .clipShape(.rect(cornerRadius: 15))
-            .padding(.horizontal)
+        if recipe.extractID().isEmpty {
+            ContentUnavailableView("No video", systemImage: "smile")
+                .frame(maxWidth: .infinity)
+                .frame(height: 90)
+        } else {
+            Video(videoID: recipe.extractID())
+                .frame(maxWidth: .infinity)
+                .frame(height: 250)
+                .clipShape(.rect(cornerRadius: 15))
+                .padding(.horizontal)
+        }
     }
     
     func CategoryAndCountryView() -> some View {
@@ -46,8 +53,8 @@ struct RecipeDetailView: View {
                 Spacer()
                 Text(recipe.category)
             }
-                Rectangle()
-                    .frame(height: 2)
+            Rectangle()
+                .frame(height: 2)
             HStack {
                 Text("Country:")
                 Spacer()
@@ -93,7 +100,37 @@ struct RecipeDetailView: View {
         .padding(.horizontal, 15)
     }
 }
-
+//helper methods
+//extension RecipeDetailView {
+//    
+//    private func save() {
+//        let fav = FavouriteRecipe(context: viewContext)
+//        fav.id = recipe.id
+//        fav.name = recipe.name
+//        fav.category = recipe.category
+//        fav.country = recipe.country
+//        fav.image = recipe.image
+//        fav.video = recipe.video
+//        fav.tag = recipe.tag
+//        
+//        do {
+//            try viewContext.save()
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
+//}
+//    .toolbar {
+//        ToolbarItem(placement: .topBarTrailing) {
+//            Button {
+//                save()
+//            } label: {
+//                Image(systemName: "heart")
+//                    .resizable()
+//                    .frame(width: 24, height: 24)
+//            }
+//        }
+//    }
 
 #Preview {
     RecipeDetailView(recipe:
