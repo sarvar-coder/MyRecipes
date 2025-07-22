@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ServiceProtocol {
-    func fetch(handler: @escaping (Result<[Recipe], Error>) -> Void)
+    func fetch() async throws -> [Recipe]
 }
 

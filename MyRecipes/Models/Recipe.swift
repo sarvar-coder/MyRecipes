@@ -65,3 +65,9 @@ struct Recipe: Identifiable, Equatable {
         }
     }
 }
+
+extension Recipe {
+    var imageURL: URL? {
+        return URL(string: image)
+    }
+}
