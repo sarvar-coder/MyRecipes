@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Meal: Codable {
-    let meals: [MealRecipe]
+struct MealContainer: Codable {
+    let meals: [Meal]
 }
 
-struct MealRecipe: Codable {
+struct Meal: Codable {
     let idMeal: String
     let strMeal: String
     let strCategory: String
@@ -63,7 +63,7 @@ struct MealRecipe: Codable {
     let strSource: String
 }
 
-extension MealRecipe {
+extension Meal {
     func ingredients() -> [String] {
         return [
             strIngredient1,

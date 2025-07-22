@@ -12,7 +12,9 @@ class RecipeViewModel: ObservableObject {
         
     @Published var service: ServiceProtocol = MealService() {
         didSet {
-            refresh()
+            Task {
+              await refresh()
+            }
         }
     }
     @Published var recipes = [Recipe]()
@@ -20,33 +22,29 @@ class RecipeViewModel: ObservableObject {
     
     init() {
         service = MealService()
-        fetchInLoop()
     }
     
     deinit {
         removeAllRecipe()
     }
     
-    func refresh() {
+    func refresh() async {
         removeAllRecipe()
-        fetchInLoop()
+        await fetchInLoop()
     }
     
-    func fetchInLoop() {
+    func fetchInLoop() async {
         for _ in 1...10 {
-            fetch()
+            await fetch()
         }
     }
-    
-    func fetch() {
-        service.fetch { result in
-            switch result {
-            case .success(let success):
-//                print(success[0].video)
-                self.recipes.append(success[0])
-            case .failure(let failure):
-                print(failure.localizedDescription)
-            }
+    @MainActor
+    func fetch() async {
+        do {
+            
+            recipes.append(contentsOf: try await service.fetch())
+        } catch {
+            print(error.localizedDescription)
         }
     }
     

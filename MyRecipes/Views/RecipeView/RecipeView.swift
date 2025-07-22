@@ -6,44 +6,50 @@
 //
 
 import SwiftUI
-//https://www.thecocktaildb.com/images/media/drink/of1rj41504348346.jpg
+
 struct RecipeView: View {
     
     @StateObject private var vm = RecipeViewModel()
     
     @State private var showServiceChangeView = false
+    
+    
     var body: some View {
         NavigationStack {
             
-            VStack {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(vm.recipes) { recipe in
-                                CardView(recipe)
-                        }
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(vm.recipes) { recipe in
+                        CardView(recipe)
                     }
-                    .scrollTargetLayout()
                 }
-                .scrollClipDisabled()
-                .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
-                .contentMargins(16, for: .scrollContent)
-    
-                
-                Button {
-                    vm.refresh()
-                } label: {
-                    Text("Refresh")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .fontDesign(.serif)
-                        .fontWidth(.condensed)
-                        .foregroundStyle(.white)
-                        .frame(width: 300, height: 40)
+                .task {
+                    await vm.fetchInLoop()
                 }
-                .padding(9)
-                .buttonStyle(.borderedProminent)
-                .tint(.cyan)
+                .scrollTargetLayout()
             }
+            .scrollClipDisabled()
+            .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
+            .contentMargins(16, for: .scrollContent)
+            
+            
+            Button {
+                Task {
+                   await vm.refresh()
+                }
+            } label: {
+                Text("Refresh")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .fontDesign(.serif)
+                    .fontWidth(.condensed)
+                    .foregroundStyle(.white)
+                    .frame(width: 300, height: 40)
+            }
+            .offset(y: 20)
+            .padding(9)
+            .buttonStyle(.borderedProminent)
+            .tint(.cyan)
             .navigationTitle("\(vm.serviceImage.title) Recipe")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -69,10 +75,10 @@ struct RecipeView: View {
         
         VStack(alignment: .center, spacing: 8) {
             NavigationLink {
-               RecipeDetailView(recipe: recipe)
+                RecipeDetailView(recipe: recipe)
             } label: {
                 HStack {
-
+                    
                     Text(recipe.name)
                         .font(.custom(.roboto(.mediumItalic), size: 23, relativeTo: .largeTitle))
                         .foregroundStyle(.white)
@@ -81,26 +87,24 @@ struct RecipeView: View {
                         .resizable()
                         .frame(width: 24, height: 24)
                         .foregroundStyle(.white)
-
-                } 
+                    
+                }
                 .padding(5)
                 .border(.white, width: 1)
             }
-          Rectangle()
+            Rectangle()
                 .fill(.white)
                 .frame(height: 4)
-            AsyncImage(url: URL(string: recipe.image)) { phase in
-                if let image = phase.image {
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(.rect(cornerRadius: 10))
-                } else if phase.image == nil {
-                    
-                } else {
-                    
-                }
+            AsyncImage(url: recipe.imageURL) { image in
+                image
+                    .resizable()
+                    .frame(width: screenWidth - 60, height: 300)
+                    .clipShape(.rect(cornerRadius: 10))
+            } placeholder: {
+                ProgressView()
+                    .frame(width: screenWidth - 60, height: 300)
             }
+            
             HStack() {
                 Text("Category:")
                 Spacer()
@@ -109,22 +113,17 @@ struct RecipeView: View {
             .font(.custom(.roboto(.mediumItalic), size: 23))
             .foregroundStyle(.white)
         }
-        .padding(15) 
+        .padding(15)
         .background(.cyan.gradient)
         .clipShape(.rect(cornerRadius: 20))
         .containerRelativeFrame(.horizontal, count: 1, spacing: 0.0)
         .scrollTransition { content, phase in
             content
+                .blur(radius: phase == .identity ? 0 : 2)
                 .scaleEffect(y: phase.isIdentity ? 1 : 0.2,
                              anchor: .center)
+//                .rotationEffect(.init(degrees: phase == .identity ? 0 : phase.value * 5), anchor: .bottomTrailing)
         }
-    }
-    
-    func TapImageView() -> some View {
-        Image(systemName: "hand.tap.fill")
-            .resizable()
-            .frame(width: 32, height: 32)
-            .tint(.white)
     }
 }
 
