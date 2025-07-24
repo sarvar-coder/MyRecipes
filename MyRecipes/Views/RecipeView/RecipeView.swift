@@ -13,14 +13,16 @@ struct RecipeView: View {
     
     @State private var showServiceChangeView = false
     
-    
     var body: some View {
         NavigationStack {
-            
+           
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+                LazyHStack {
                     ForEach(vm.recipes) { recipe in
                         CardView(recipe)
+                            .task {
+                               await vm.loadMoreRecipes(recipeID: recipe.id)
+                            }
                     }
                 }
                 .task {
@@ -31,7 +33,6 @@ struct RecipeView: View {
             .scrollClipDisabled()
             .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
             .contentMargins(16, for: .scrollContent)
-            
             
             Button {
                 Task {
@@ -46,7 +47,7 @@ struct RecipeView: View {
                     .foregroundStyle(.white)
                     .frame(width: 300, height: 40)
             }
-            .offset(y: 20)
+            .offset(y: -10)
             .padding(9)
             .buttonStyle(.borderedProminent)
             .tint(.cyan)
