@@ -20,6 +20,10 @@ class RecipeViewModel: ObservableObject {
     @Published var recipes = [Recipe]()
     @Published var serviceImage: ServiceType = .meal
     
+    /// pagination
+    var hasMoreRecipes = false
+    var lastRecipeID = ""
+    
     init() {
         service = MealService()
     }
@@ -28,20 +32,26 @@ class RecipeViewModel: ObservableObject {
         removeAllRecipe()
     }
     
-    func refresh() async {
+    func refresh() async  {
         removeAllRecipe()
         await fetchInLoop()
     }
     
-    func fetchInLoop() async {
+    func fetchInLoop() async  {
         for _ in 1...10 {
-            await fetch()
+            do {
+                try await fetch()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
+        hasMoreRecipes = false 
+        lastRecipeID = recipes.last?.id ?? ""
     }
+    
     @MainActor
-    func fetch() async {
+    func fetch() async throws {
         do {
-            
             recipes.append(contentsOf: try await service.fetch())
         } catch {
             print(error.localizedDescription)
@@ -51,7 +61,13 @@ class RecipeViewModel: ObservableObject {
     func removeAllRecipe() {
         recipes.removeAll()
     }
-
+    
+    func loadMoreRecipes(recipeID: String) async {
+        if lastRecipeID == recipeID {
+            hasMoreRecipes = true
+            await fetchInLoop()
+        }
+    }
 }
 
 
